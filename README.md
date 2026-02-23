@@ -23,6 +23,34 @@ El diseño de referencia está en `/design/spotify-prototype.pdf`. Revísalo ant
 
 Consulta el archivo `style-guide.md` para la paleta de colores, tipografías y tamaños de referencia.
 
+---
+
+## Cómo empezar: fork y clonado
+
+Este repositorio es la plantilla de partida. **No trabajes directamente sobre él.** Sigue estos pasos antes de escribir ningún código:
+
+1. Haz un **fork** de este repositorio en tu cuenta de GitHub:
+   - Pulsa el botón `Fork` en la esquina superior derecha de la página del repositorio
+   - Selecciona tu cuenta personal como destino del fork
+
+2. **Clona tu fork** en tu máquina local (sustituye `tu-usuario` por tu nombre de usuario de GitHub):
+
+   ```bash
+   git clone https://github.com/tu-usuario/clon-spotify.git
+   cd clon-spotify
+   ```
+
+3. Abre el proyecto en tu editor:
+
+   ```bash
+   code .
+   ```
+
+4. Trabaja sobre tu copia. Los cambios que hagas y subas con `git push` quedarán en **tu repositorio**, no en el original.
+
+> Cuando termines, comparte la URL de tu repositorio y la URL del proyecto desplegado con el formador.
+
+---
 
 ## Instrucciones
 
@@ -96,13 +124,18 @@ Utiliza nombres de clase que expliquen **qué es** el elemento, no cómo se ve:
 
 ```css
 /* Incorrecto — describe el aspecto visual */
-.verde-oscuro { }
-.columna-izquierda { }
+.verde-oscuro {
+}
+.columna-izquierda {
+}
 
 /* Correcto — describe el contenido */
-.nav-link { }
-.feature-card { }
-.hero-title { }
+.nav-link {
+}
+.feature-card {
+}
+.hero-title {
+}
 ```
 
 Se recomienda seguir la convención [BEM](http://getbem.com/) (Block, Element, Modifier) o cualquier metodología que dé coherencia a tus nombres de clase.
@@ -118,7 +151,7 @@ Define todos los valores reutilizables (colores, tipografías, tamaños) como va
   --color-text-primary: #ffffff;
   --color-text-secondary: #b3b3b3;
 
-  --font-base: 'Montserrat', Helvetica, Arial, sans-serif;
+  --font-base: "Montserrat", Helvetica, Arial, sans-serif;
   --font-size-base: 16px;
 
   --spacing-md: 1rem;
@@ -174,13 +207,67 @@ Escribe primero los estilos para pantallas pequeñas y luego añade las variacio
 
 El diseño debe adaptarse correctamente al menos en los siguientes breakpoints:
 
-| Nombre   | Ancho mínimo |
-|----------|-------------|
-| Mobile   | 320px       |
-| Tablet   | 768px       |
-| Desktop  | 1024px      |
+| Nombre  | Ancho mínimo |
+| ------- | ------------ |
+| Mobile  | 320px        |
+| Tablet  | 768px        |
+| Desktop | 1024px       |
 
 Prueba el resultado en Chrome DevTools activando la vista de dispositivo.
+
+---
+
+## Commits: trabaja de forma atómica
+
+Este ejercicio también se evaluará por cómo usas git, no solo por el resultado final. Desarrolla el hábito de hacer commits frecuentes y bien descritos desde el primer día.
+
+### Un commit, un cambio
+
+Cada commit debe representar **un único cambio coherente y completo**. Nunca mezcles en el mismo commit cosas no relacionadas.
+
+```bash
+# Bien — un commit por tarea concreta
+git commit -m "Añadir estructura HTML semántica de la navegación"
+git commit -m "Aplicar estilos base y variables CSS"
+git commit -m "Maquetar sección hero en móvil"
+
+# Mal — todo mezclado
+git commit -m "cosas"
+git commit -m "cambios"
+git commit -m "modified: index.html modified: style.css"
+```
+
+### Convención de mensajes
+
+Usa el **modo imperativo** en presente, como si completaras la frase _"Este commit va a..."_:
+
+| Prefijo        | Cuándo usarlo                                 |
+| -------------- | --------------------------------------------- |
+| `Añadir`       | Código o ficheros nuevos                      |
+| `Corregir`     | Reparar un error                              |
+| `Actualizar`   | Modificar algo existente                      |
+| `Eliminar`     | Borrar código o ficheros                      |
+| `Refactorizar` | Reorganizar sin cambiar comportamiento        |
+| `Estilo`       | Cambios solo de formato, espaciado o nombrado |
+
+Ejemplos reales:
+
+```bash
+git commit -m "Añadir reset CSS y variables de color"
+git commit -m "Corregir alineación de tarjetas en tablet"
+git commit -m "Actualizar breakpoint del hero a 768px"
+git commit -m "Añadir media query para menú desktop"
+```
+
+### Cuándo hacer commit
+
+- Al terminar cada iteración o sección funcional
+- Antes de hacer un cambio grande (por si necesitas volver atrás)
+- Al final de cada sesión de trabajo, aunque no hayas terminado
+
+No esperes a tener todo listo para hacer el primer commit. Un historial con muchos commits pequeños es mucho más útil que uno con tres commits enormes.
+
+---
 
 ## Proceso sugerido
 
@@ -210,10 +297,15 @@ Cuando termines el ejercicio, sustituye este README por uno propio. Una buena es
 
 ```md
 ## Descripción del proyecto
+
 ## Capturas de pantalla (móvil y desktop)
+
 ## Lo que construí con...
+
 ## Lo que aprendí
+
 ## Lo que mejoraría con más tiempo
+
 ## URL del proyecto desplegado
 ```
 
