@@ -16,7 +16,8 @@
 
 :root {
     
-    --font-base: "Montserrat", "DM Sans", Helvetica, Arial, sans-serif; /* Tipos de fonts */
+    --font-base: "DM Sans", Helvetica, Arial, sans-serif; /* Tipos de fonts */
+    --font-header: "Montserrat", sans-serif;
 
     /* Tamaños de fonts */
     --font-size-xs: 0.75rem; /*  12px */
@@ -64,17 +65,15 @@
 
 body{
     max-width: 758px;
+    font-family: var(--font-base);
+    align-items: center;
     
 }
 
 /* ---- HEADER CONFIG---- */
 .navigation{
-    justify-content: space-between;
+    justify-content: space-between;  /* Dividimos el espacio sobrante entre lo definido en nav::before y nav */
     font-family: var(--font-base);
-}
-
-.spotify-logo{
-    width: 30%;
 }
 
 nav::before{
@@ -99,5 +98,30 @@ nav a{
     font-size: 14px;
     padding-left: var(--spacing-sm);
     text-decoration: none;
+}
+
+/* ----HERO---- */
+
+.hero{
+    color: var(--color-text-primary);
+    height: 454px;
+
+    background-image: url(assets/landing.jpg);
+    background-size: cover;
+    background-position: center;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    padding: var(--spacing-lg)
+}
+
+.hero h1{
+    font-family: var(--font-header);
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--spacing-lg);
 }
 
