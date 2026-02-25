@@ -63,25 +63,41 @@
 }
 
 body{
-    max-width: 768px;
-}
-.spotify-logo, img, .logo, .spotify-app{
-    height: auto;
+    max-width: 758px;
+    
 }
 
+/* ---- HEADER CONFIG---- */
 .navigation{
-    display: flex;
-    flex-direction: space-around;
-    align-items: center;
-    
+    justify-content: space-between;
+    font-family: var(--font-base);
 }
 
 .spotify-logo{
     width: 30%;
 }
 
+nav::before{
+    content: "";
+    display: inline-block;
+    margin: var(--spacing-xs);
+    width: 120px;
+    height: 40px;
+    background-image: url(assets/spotify-logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
 nav{
-    font-size: 16px;
-    padding-left: 15px;
+    display: flex;
+    align-items: center;
+}
+
+nav a{
+    align-items: center;
+    color: var(--color-text-muted);
+    font-size: 14px;
+    padding-left: var(--spacing-sm);
+    text-decoration: none;
 }
 
