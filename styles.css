@@ -202,13 +202,28 @@ nav a{
 
 /* ----WRAPPER---- */
 
-.content-wrapper{
+.yeezy-section{
     background-color: var(--color-brand-hover);
+}
+.content-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.h2-wrapper{
+    text-align: center;
 }
 
 .text-container{
     width: 50%;
     text-align: left;
+}
+
+.image-content{
+    width: 50%;
+
 }
 
 .spotify-app, .logo{
