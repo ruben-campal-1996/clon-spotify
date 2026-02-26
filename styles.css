@@ -40,6 +40,7 @@
     --spacing-lg: 2rem; /* 32px */
     --spacing-xl: 4rem; /* 64px */
     --spacing-2xl: 6rem; /* 96px */
+    --spacing-3xl: 8rem; /* 128px */
 
     /* Bordes y radios */
     --radius-sm: 4px;
@@ -80,8 +81,8 @@ nav::before{        /* Logotipo Spotify */
     content: "";    /* Obligatorio, sin esto, no se vería */
     display: inline-block;      /* Utilizamos inline para que se adapte en linea, y block para poder dimensionarla */
     margin: var(--spacing-xs);
-    width: 120px;
-    height: 40px;
+    width: var(--spacing-3xl);
+    height: var(--spacing-lg);
     background-image: url(assets/spotify-logo.png);
     background-size: contain;          /* Adaptación de imagen a contenedor */
     background-repeat: no-repeat;      /* Que no se repita la imagen si el contenedor es mas pequeño que la imagen */
@@ -128,7 +129,7 @@ nav a{
 
 /* ----FEATURES CONTAINER---- */
 
-.h2-features{
+.h2-features{           /* Titulo features */
     text-align: center;
     width: fit-content;
     margin: auto;
@@ -141,4 +142,16 @@ nav a{
     height: 3px;
     background-color: var(--color-brand-hover);
   
+}
+
+.h3-songs {
+    text-align: center;
+
+}
+
+.h3-songs::before{
+    content: "";
+    display: block;
+    background-image: url(assets/music-icon.png);
+    
 }
