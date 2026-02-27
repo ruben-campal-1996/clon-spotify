@@ -4,15 +4,6 @@
     box-sizing: border-box;
 }
 
-/* Futuras medidas para MediaQueries:  */
-/* Tablet */
-/* @media (min-width: 768px) { ... } */
-
-/* Desktop */
-/* @media (min-width: 1024px) { ... } */
-
-/* Desktop ancho */
-/* @media (min-width: 1440px) { ... } */
 
 :root {
     
@@ -72,7 +63,7 @@
 body{
     max-width: 758px;
     font-family: var(--font-base);
-    align-items: center;
+    
        
 }
 
@@ -83,6 +74,7 @@ body{
     align-items: center;
     justify-content: space-between;
     font-family: var(--font-base);
+    padding: var(--spacing-2Xs) var(--spacing-2Xs);
 }
 
 nav{
@@ -91,13 +83,11 @@ nav{
 }
 
 nav a{
-    
     color: var(--color-text-muted);
     text-decoration: none;
-    justify-content: center
 }
 
-.hamburguer-button{   /* Contenedor de menu hamburguesa */
+.hamburger-button{   /* Contenedor de menu hamburguesa */
     display: flex;
     flex-direction: column-reverse;
     justify-content: space-around;
@@ -124,6 +114,7 @@ nav a{
 }
 .nav-menu{
     display: none;
+
 }
 .menu-checkbox:checked ~ .nav-menu{   /* Lógica para, cuando presionamos el icono (checked) se despliegue */
     display: flex;
@@ -134,9 +125,7 @@ nav a{
     gap: var(--spacing-md);
 }
 
-
 /* ----HERO---- */
-
 .hero{
     color: var(--color-text-primary);
     height: 454px;
@@ -156,10 +145,13 @@ nav a{
 
 .hero h1{
     font-family: var(--font-header);
-    font-size: var(--font-size-xl);
-    margin-bottom: var(--spacing-lg);
+    font-size: var(--font-size-2xl);
+    margin-bottom: var(--spacing-md);
 }
 
+.hero p{
+    color: var(--color-text-primary);
+}
 
 /* ----FEATURES CONTAINER---- */
 
@@ -167,7 +159,7 @@ nav a{
     text-align: center;
     width: fit-content;
     margin: auto;
-    padding: var(--spacing-sm);
+    padding: var(--spacing-md);
 }
 
 .h2-features::after{                        /* Decoración Linea Verde */
@@ -176,7 +168,6 @@ nav a{
     width: 100%;
     height: var(--spacing-3Xs);
     background-color: var(--color-brand);
-  
 }
 
 .features-container{
@@ -184,6 +175,7 @@ nav a{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin: var(--spacing-sm);
 }
 
 .features-container article{    
@@ -191,21 +183,22 @@ nav a{
     padding: var(--spacing-sm);
 }
 
-.h3-music, .h3-songs, .h3-stream{           /* Color headers Features */
+.features-container h3{           /* Color headers Features */
     color:var(--color-brand)
 }
 
-.music-icon, .quality-icon, .devices-icon{  /* Tamaño iconos Features */
+.features-icon{  /* Tamaño iconos Features */
     width: 25%;
 }
 
 
 /* ----WRAPPER---- */
 
-.yeezy-section{
+.yeezy-section{                             /* Seccion para separar titutlo de div y meterle color */
     background-color: var(--color-brand-hover);
 }
-.content-wrapper{
+
+.content-wrapper{                           
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -214,18 +207,54 @@ nav a{
 
 .h2-wrapper{
     text-align: center;
+    width: fit-content;
+    margin: auto;
+    padding: var(--spacing-sm);
+    color: var(--color-text-primary);
+}
+
+.h2-wrapper::after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: var(--spacing-3Xs);
+    background-color: var(--color-text-primary);
 }
 
 .text-container{
-    width: 50%;
+    width: 90%;
+    height: auto;
     text-align: left;
+    color: var(--color-text-primary)
+}
+
+.text-container h3{
+    padding-bottom: var(--spacing-Xs);
+}
+
+.text-container article{
+    margin: var(--spacing-sm)
 }
 
 .image-content{
-    width: 50%;
+    display: flex;
+    width: 100%;
+    justify-content: right;
 
 }
 
-.spotify-app, .logo{
-    width: 40%;
+.spotify-app{
+    width: 100%;
 }
+
+
+/* Futuras medidas para MediaQueries:  */
+/* Tablet */
+/* @media (min-width: 768px) { ... } */
+
+/* Desktop */
+/* @media (min-width: 1024px) { ... } */
+
+/* Desktop ancho */
+/* @media (min-width: 1440px) { ... } */
+
